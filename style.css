@@ -1,0 +1,143 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-group input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #218838;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+    transform: scale(1.2); /* Make checkbox slightly larger */
+    cursor: pointer;
+}
+
+.task-text {
+    flex-grow: 1;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer; /* Indicate it's clickable */
+    padding: 5px 0; /* Provide some padding for easier clicking */
+}
+
+/* Completed task styling */
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.edit-input {
+    flex-grow: 1;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-right: 10px; /* Space between input and delete button */
+    box-sizing: border-box; /* Include padding/border in element's total width and height */
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: auto; /* Push to the right */
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input[type="text"],
+    .input-group button {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .input-group button {
+        margin-bottom: 0;
+    }
+
+    .input-group input[type="text"] {
+        margin-bottom: 10px;
+    }
+}
